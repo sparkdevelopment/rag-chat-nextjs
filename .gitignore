@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+rag.db
+temp.ts
+document_library
+db.sqlite
+.serena
