@@ -3,6 +3,7 @@
 import { useChat } from "@ai-sdk/react";
 import { useState } from "react";
 import { TextUIPart } from "ai";
+import ReactMarkdown from "react-markdown"
 
 export default function Home() {
   const { messages, sendMessage } = useChat();
@@ -31,7 +32,7 @@ export default function Home() {
               <span className="mb-1 block text-xs font-semibold uppercase tracking-wide text-gray-500">
                 {currentMessage.role}
               </span>
-              <span className="whitespace-pre-wrap">{text}</span>
+              <span className="whitespace-pre-wrap"><ReactMarkdown>{text}</ReactMarkdown></span>
             </div>
           );
         })}
