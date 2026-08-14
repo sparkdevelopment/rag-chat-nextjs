@@ -20,6 +20,21 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Chatting with your documents
+
+This project also includes a RAG ("chat with your docs") feature. Before you
+can ask questions, you need to ingest some documents:
+
+1. Add `.txt`, `.md`, or `.pdf` files to `document_library/`. A small sample
+   doc (`sample-welcome.md`) is included so you can try it out immediately —
+   feel free to add your own alongside or in place of it.
+2. Set `ANTHROPIC_API_KEY` and `VOYAGE_API_KEY` in `.env.local`.
+3. Run `npm run ingest` to chunk, embed, and store your documents.
+4. Run `npm run dev` and open the app to chat with your documents.
+
+`document_library/` is gitignored (aside from the sample doc) since it's
+meant to hold your own local files, not project source.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

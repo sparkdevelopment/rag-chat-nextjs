@@ -41,6 +41,7 @@ yarn-error.log*
 next-env.d.ts
 rag.db
 temp.ts
-document_library
+document_library/*
+!document_library/sample-welcome.md
 db.sqlite
 .serena
