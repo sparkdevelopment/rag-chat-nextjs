@@ -103,7 +103,7 @@ function buildChunksArray(text: string, filePath: string): string[] {
 }
 
 async function extractTextFromPDF(filePath: string): Promise<TextResult> {
-    const pdfText = new PDFParse(fs.readFileSync(filePath));
+    const pdfText = new PDFParse(new Uint8Array(fs.readFileSync(filePath)));
     return Promise.resolve(pdfText.getText());
 }
 
